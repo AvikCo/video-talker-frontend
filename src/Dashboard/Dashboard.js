@@ -15,7 +15,7 @@ import { setTurnServers } from "../utils/webRTC/TURN";
 import "./Dashboard.css";
 
 const Dashboard = ({ username, callState }) => {
-  const SERVER = process.env.SERVER || "http://localhost:5000"
+  const SERVER = process.env.SERVER || "http://localhost:5000";
   useEffect(() => {
     // HERE PLACE YOUR BACKEND SERVER ADDRESS TO FETCH TURN CREDENTIALS
     axios

@@ -203,7 +203,7 @@ export const switchForScreenSharingStream = async () => {
       screenSharingStream = await navigator.mediaDevices.getDisplayMedia({ video: true });
       store.dispatch(setScreenSharingActive(true));
       const senders = peerConnection.getSenders();
-      const sender = senders.find(sender => sender.track.kind == screenSharingStream.getVideoTracks()[0].kind);
+      const sender = senders.find(sender => sender.track.kind === screenSharingStream.getVideoTracks()[0].kind);
       sender.replaceTrack(screenSharingStream.getVideoTracks()[0]);
     } catch (err) {
       console.error('error occured when trying to get screen sharing stream', err);
@@ -211,7 +211,7 @@ export const switchForScreenSharingStream = async () => {
   } else {
     const localStream = store.getState().call.localStream;
     const senders = peerConnection.getSenders();
-    const sender = senders.find(sender => sender.track.kind == localStream.getVideoTracks()[0].kind);
+    const sender = senders.find(sender => sender.track.kind === localStream.getVideoTracks()[0].kind);
     sender.replaceTrack(localStream.getVideoTracks()[0]);
     store.dispatch(setScreenSharingActive(false));
     screenSharingStream.getTracks().forEach(track => track.stop());
