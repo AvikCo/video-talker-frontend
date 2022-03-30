@@ -5,7 +5,8 @@ import * as webRTCHandler from "../webRTC/webRTCHandler";
 import * as webRTCGroupCallHandler from "../webRTC/webRTCGroupCallHandler";
 
 // HERE PLACE ADDRESS OF YOUR HOSTED BACKEND SERVER
-const SERVER = process.env.SERVER || "http://localhost:5000";
+const SERVER = "https://videotalker22.herokuapp.com/";
+//process.env.SERVER || "http://localhost:5000";
 
 const broadcastEventTypes = {
   ACTIVE_USERS: "ACTIVE_USERS",
