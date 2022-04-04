@@ -28,7 +28,7 @@ const LoginPage = ({ saveUsername }) => {
         <div className='login-page_title_container'>
           <h2>Get on Board</h2>
         </div>
-        <UsernameInput username={username} setUsername={setUsername} />
+        <UsernameInput username={username} setUsername={setUsername} onEnterPressed = {handleSubmitButtonPressed} />
         <SubmitButton handleSubmitButtonPressed={handleSubmitButtonPressed} />
       </div>
     </div>

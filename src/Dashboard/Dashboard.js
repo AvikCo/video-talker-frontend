@@ -19,9 +19,7 @@ const Dashboard = ({ username, callState }) => {
   useEffect(() => {
     // HERE PLACE YOUR BACKEND SERVER ADDRESS TO FETCH TURN CREDENTIALS
     axios
-      .get(
-      `https://videotalker22.herokuapp.com/api/get-turn-credentials`
-      )
+      .get('https://videotalker22.herokuapp.com/api/get-turn-credentials')
       .then((responseData) => {
         console.log(responseData);
         setTurnServers(responseData.data.token.iceServers);
